@@ -1,0 +1,149 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.navbar-inverse { 
+    background-color: #4f6981 !important;
+}
+
+/*Added by dev*/
+.infos {
+    display: none;
+}
+
+.headerDiv{
+    position:absolute;
+    min-width:710px;
+    min-height:48px;
+    left:50%;
+    margin-left: -355px;
+}
+
+.logo {
+    position: absolute;
+    margin:0px 0px 0px -60px;
+}
+
+#currencySelector {
+    margin:10px 0px 0px 0px;
+    position: absolute;
+    right: 0;
+}
+
+#SearchBox{
+    margin:10px 0px 0px -150px;
+    position: absolute;
+    left: 50%;
+
+}
+
+.searchBoxBox{
+    min-width: 250px;
+}
+
+#firstPage, #secondPage, #page{
+    min-width: 710px;
+    max-width: 710px;
+    left: 50%;
+    background-color: #444444;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    position: relative;
+    margin-left:-355px;
+}
+
+.itemBox {
+    background-color:#4f6981;
+    left: 50%;
+    width: 700px;
+    height: 72px;
+    margin: 0px 25px 5px -350px;
+    position: relative;
+}
+
+.itemName {
+    background-color:#dddddd;
+    position: absolute;
+    min-width:90%;
+    max-width:90%;
+    min-height:92%;
+    font-size:200%;
+    white-space: nowrap;  
+    text-align: center;
+    margin: 3px 0px 0px 3px;
+    padding-top: 10px;
+    top: 0px;
+    left: 0px;
+    overflow:hidden;
+}
+
+.itemName:hover{
+    background-color:#eeeeee;
+}
+
+.pricesInItemBox{
+    position:absolute;
+    min-width:60px;
+    text-align:center;
+    top: 0px;
+    right: 0px;
+    margin: 3px 3px 0px 0px;
+}
+
+.priceAmazon{
+    background-color:#c7b374;
+    margin: 0px 0px 0px 0px;
+}
+
+.priceNew{
+    background-color:#c7b374;
+    margin: 3px 0px 3px 0px;
+}
+
+.priceUsed{
+    background-color:#c7b374;
+    margin: 0px 0px 3px 0px;
+}
+
+.PageShortcut {
+    position:relative;
+    margin: 4px 4px 2px 0px;
+    font-size: 125%;
+    height:40px;
+    width:40px;
+    background-color: #c7b374;
+    float:left;
+    text-align: center;
+    border: 2px solid #444444;
+    cursor:pointer;
+    padding-top: 6px
+}
+
+.PageShortcut:hover{
+    background-color:#b6e9e9 ;
+}
+
+.signature {
+    position:absolute;
+    right: 29%;
+}
+
+.logoonly {
+    display: block;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 0.4;
+}

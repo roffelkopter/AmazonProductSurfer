@@ -1,0 +1,50 @@
+﻿@model Amazon_Product_Surfer.Models.ViewModel
+
+<div id=@ViewBag.Message2>
+    @{
+        if (Model.ItemListForView.Count() > 0)
+        {
+            var howMany = 13;
+            if (Model.ItemListForView.Count() < 13)
+            {
+                howMany = Model.ItemListForView.Count();
+            }
+
+            for (int i = 0; i < howMany; i++)
+            {
+                <div class="itemBox">
+                    @{
+                        <a href=@Html.DisplayFor(modelItem => Model.ItemListForView[i].website) class="itemName"> @Html.DisplayFor(modelItem => Model.ItemListForView[i].name)</a>
+
+                        var amazePrice = Model.ItemListForView[i].priceAmazonF.ToString("F", System.Globalization.CultureInfo.InvariantCulture);
+                        var newPrice = Model.ItemListForView[i].priceNewF.ToString("F", System.Globalization.CultureInfo.InvariantCulture);
+                        var usedPrice = Model.ItemListForView[i].priceUsedF.ToString("F", System.Globalization.CultureInfo.InvariantCulture);
+
+                        if (amazePrice == "-1.00")
+                        {
+                            amazePrice = "X";
+                        }
+                        if (newPrice == "-1.00")
+                        {
+                            newPrice = "X";
+                        }
+                        if (usedPrice == "-1.00")
+                        {
+                            usedPrice = "X";
+                        }
+
+                        <div class="pricesInItemBox">
+                            <div value=@Html.DisplayFor(modelItem => Model.ItemListForView[i].priceAmazon) class="price priceAmazon" title="Amazon's price">@amazePrice</div>
+                            <div value=@Html.DisplayFor(modelItem => Model.ItemListForView[i].priceNew) class="price priceNew" title="Lowest price of new item">@newPrice</div>
+                            <div value=@Html.DisplayFor(modelItem => Model.ItemListForView[i].priceUsed) class="price priceUsed" title="Lowest price of used item">@usedPrice</div>
+                        </div>
+                    }
+                </div>
+                }
+            }
+            else
+            {
+                <h2>No results :(</h2>
+            }
+    }
+</div>

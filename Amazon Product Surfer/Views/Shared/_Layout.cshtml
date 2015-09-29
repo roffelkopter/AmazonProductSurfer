@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Amazon Surfer</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/AmazeSurferJS.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                <div class="headerDiv">
+                    <div class="logo">
+                        <a href="/">
+                            <img src="~/Content/Images/logo.png" alt="Mountain View" style="width:250px;height:50px;" id="logo">
+                        </a>
+                    </div>
+                    <div id="SearchBox">
+                        @using (Html.BeginForm("Search", "Home", new { page = 1 }))
+                        {
+                            @Html.TextBox("Name", "1984", new { @class = "searchBoxBox" })
+                            <input type="submit" value="Search" id="SearchButton" />
+                        }
+                    </div>
+
+                    <div id="currencySelector">
+                        <select id="CurrencyDropDown">
+                            <option>USD</option>
+                            <option>EUR</option>
+                            <option>RUB</option>
+                        </select>
+
+                        <button type="button" onclick="UpdateStuff()" id="CurrencyButton">Change currency</button>
+                    </div>
+                </div>
+</div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <footer>
+            <br />
+            <br />
+            <hr />
+            <p class="signature">&copy; @DateTime.Now.Year - Amazon surfer by Uku Tarlap</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
