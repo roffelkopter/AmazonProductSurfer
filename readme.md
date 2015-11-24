@@ -15,3 +15,11 @@ Lahendada .NET'is ja soovitatavalt MVC-raamistikku kasutades. Info presenteerimi
 5) Hinna/valuuta muutus realiseeri AJAX’iga update’iga mitte full page load’iga.
  
 Tee nii, et leht näeks natukenegi ilus välja ka.
+
+Lahendus:
+
+AJAX-it kasutasin valuutakursside muutmisel ja järgmise lehekülje preloadimiseks, kui käesolev leht oli ise juba preloaded. 
+
+Dünaamiline preloadimine töötab hetkel ainult järgnevate lehtede suunas. Tagasiminemine eelmisele ja kõik ülejäänud, mis pole kohe järgmine leht, töötavad full page reloadiga. 
+
+Otsingutulemusi kuvab lehekülje peale 13, aga ainult maksimaalselt kolme lehekülje jagu, kuna Amazon piirab päringuid 50 tulemusega otsingusõna kohta.
