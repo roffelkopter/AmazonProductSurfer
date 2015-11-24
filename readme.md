@@ -1,5 +1,12 @@
 # AmazonProductSurfer
 
+Põhilised koodi osad:
+Controller - https://github.com/roffelkopter/AmazonProductSurfer/blob/master/Amazon%20Product%20Surfer/Controllers/HomeController.cs
+
+Models - https://github.com/roffelkopter/AmazonProductSurfer/tree/master/Amazon%20Product%20Surfer/Models
+
+JS - https://github.com/roffelkopter/AmazonProductSurfer/blob/master/Amazon%20Product%20Surfer/Scripts/AmazeSurferJS.js
+
 Ülesanne:
 
 Lahendada .NET'is ja soovitatavalt MVC-raamistikku kasutades. Info presenteerimine võiks olla JQuery’t kasutades.
